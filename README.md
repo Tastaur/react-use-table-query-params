@@ -60,12 +60,13 @@ interface UseTableQueryParamsResponse<
 ```
 Parameter extends from parameters of `usePaginationParams`
 
-| Parameter                      | Type                                                   | Required? | Description                                                            |
-|--------------------------------|--------------------------------------------------------|-----------|------------------------------------------------------------------------|
-| `parseFiltersForRequest`       | `(params: URLSearchParams) => QObj`                    | required  | Function which for convert URLSearchParams to object for request       |
-| `prepareFiltersForComponents`  | `(params: URLSearchParams) => FObj`                    | required  | Function which for convert URLSearchParams to object for filters in UI |
-| `beforeSubmit`                 | `(data: FObj) => QObj`                                 | required  | Function which for convert filter object to object for URL             |
-| `validateOrderBy`              | ` validateOrderBy: (params: string) => Optional<OKey>` | required  | Function which for validate orderKey                                   |
-| `defaultOrderKey`              | `defaultOrderKey?: OKey`                               | optional  | Default order key                                                      |
-| `defaultParams`                | `defaultParams?: QObj`                                 | optional  | Default object for URLSearchParams                                     |
-| `defaultDirection`             | `defaultDirection?: ODirection`                        | optional  | Default order direction                                                |
+| Parameter                     | Type                                                    | Required? | Description                                                            |
+|-------------------------------|---------------------------------------------------------|-----------|------------------------------------------------------------------------|
+| `keys`                        | `QKey[]`                                                | required  | List of keys, which be used for filters                                |
+| `parseFiltersForRequest`      | `(params: URLSearchParams) => QObj`                     | required  | Function which for convert URLSearchParams to object for request       |
+| `prepareFiltersForComponents` | `(params: URLSearchParams) => FObj`                     | required  | Function which for convert URLSearchParams to object for filters in UI |
+| `beforeSubmit`                | `(data: FObj) => QObj`                                  | required  | Function which for convert filter object to object for URL             |
+| `validateOrderBy`             | ` validateOrderBy: (params: string) => Optional<OKey>`  | required  | Function which for validate orderKey                                   |
+| `defaultOrderKey`             | `defaultOrderKey?: OKey`                                | optional  | Default order key                                                      |
+| `defaultParams`               | `defaultParams?: QObj`                                  | optional  | Default object for URLSearchParams                                     |
+| `defaultDirection`            | `defaultDirection?: ODirection`                         | optional  | Default order direction                                                |

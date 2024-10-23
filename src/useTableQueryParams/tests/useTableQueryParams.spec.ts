@@ -29,6 +29,7 @@ describe('useTableQueryParams', () => {
         prepareFiltersForComponents,
         beforeSubmit,
         validateOrderBy,
+        keys: [],
       }));
       expect(result.current.changeOrder).toBeTypeOf('function');
       expect(result.current.clearFilters).toBeTypeOf('function');
@@ -59,6 +60,7 @@ describe('useTableQueryParams', () => {
         prepareFiltersForComponents,
         beforeSubmit,
         validateOrderBy,
+        keys: [],
       }));
       expect(result.current.limit).toEqual(10);
       expect(result.current.offset).toEqual(4);
@@ -97,6 +99,7 @@ describe('useTableQueryParams', () => {
         beforeSubmit,
         defaultParams,
         validateOrderBy,
+        keys: [],
       }));
       expect(result.current.limit).toEqual(5);
       expect(result.current.params.get('camera_type')).toEqual(mockParams.get('camera_type'));
@@ -112,6 +115,7 @@ describe('useTableQueryParams', () => {
         prepareFiltersForComponents,
         beforeSubmit,
         validateOrderBy,
+        keys: [],
       }));
 
       act(() => {
@@ -141,6 +145,7 @@ describe('useTableQueryParams', () => {
         beforeSubmit,
         defaultParams,
         validateOrderBy,
+        keys: [],
       }));
 
       expect(result.current.filtersForRender).toEqual(defaultParams);

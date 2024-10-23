@@ -1,7 +1,7 @@
 {
   "name": "react-use-table-query-params",
   "description": "A simple React library for managing table filters and pagination through the URL",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "lib/index.js",
   "module": "esm/index.js",
   "author": "@tastaur",

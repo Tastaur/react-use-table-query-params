@@ -12,6 +12,7 @@ export interface UseTableQueryParamsArgs<
     OKey extends string,
     ODirection extends OrderDirection,
 > extends UsePaginationParamsDefaultArgs {
+  keys: QKey[],
   parseFiltersForRequest: (params: URLSearchParams) => QObj,
   prepareFiltersForComponents: (params: URLSearchParams) => FObj
   beforeSubmit: (data: FObj) => QObj

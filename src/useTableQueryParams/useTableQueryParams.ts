@@ -20,6 +20,7 @@ export const useTableQueryParams = <
     defaultDirection,
     offset: paramsOffset,
     limit: paramsLimit,
+    keys,
   }: UseTableQueryParamsArgs<QKey, QObj, FObj, OKey, ODirection>)
   : UseTableQueryParamsResponse<QKey, QObj, FObj, OKey, ODirection> => {
   const { limit, setLimit, offset, setOffset, params, setParams } = usePaginationParams({
@@ -62,7 +63,7 @@ export const useTableQueryParams = <
 
   const clearFilters = () => {
     setParams(prev => {
-      prev.forEach((_, key) => {
+      keys.forEach((key) => {
         prev.delete(key);
       });
       return prev;
