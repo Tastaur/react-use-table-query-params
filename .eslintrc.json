@@ -1,0 +1,82 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint/eslint-plugin",
+    "react-hooks",
+    "react",
+    "jsx-a11y",
+    "import"
+  ],
+  "extends": ["airbnb-typescript"],
+  "ignorePatterns": [
+    "esm/**",
+    "lib/**",
+    "vite.config.ts",
+    "vitest.config.ts"
+  ],
+  "env": {
+    "browser": true,
+    "jest": true,
+    "es6": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "project": "./tsconfig.json"
+  },
+  "overrides": [
+    {
+      "files": [
+        "*.test.ts",
+        "src/**/*.*"
+      ]
+    }
+  ],
+  "rules": {
+    "no-negated-condition": "off",
+    "@typescript-eslint/default-param-last": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "@typescript-eslint/no-unused-vars": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "object-curly-spacing": [
+      "error",
+      "always",
+      {
+        "objectsInObjects": true
+      }
+    ],
+    "max-len": [
+      "error",
+      {
+        "code": 120,
+        "ignorePattern": "import \\{?\\s?.*\\s?\\}? from '.*';",
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreRegExpLiterals": true
+      }
+    ],
+    "curly": [
+      "error",
+      "all"
+    ],
+    "indent": "off",
+    "@typescript-eslint/no-unused-expressions": "off",
+    "import/no-extraneous-dependencies": "off",
+    "semi": "off",
+    "@typescript-eslint/semi": ["error"],
+    "@typescript-eslint/naming-convention": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "import/first": "error",
+    "import/newline-after-import": ["error", { "count": 2 }],
+    "prefer-template": "error",
+    "yoda": ["error", "always", { "onlyEquality": true }],
+    "import/order": ["error", {
+      "groups": [["builtin", "external"], ["internal"], ["index", "sibling", "parent"]],
+      "newlines-between": "always"
+    }],
+    "import/no-named-as-default": "off"
+  }
+}
